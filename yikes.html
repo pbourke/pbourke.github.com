@@ -1,0 +1,31 @@
+<html ng-app="yikes">
+    <head>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+         <script src="yikes.js"></script>
+    </head>
+<body ng-controller="YikesCtrl">
+example: 18=16, 20=18, 22=20<br/>
+    <input ng-model="line" ng-change="onLine()" size="30"/>
+<div id="container">
+    <table> 
+        <tbody>
+            <tr>
+                <th>Strap</th> 
+                <th ng-repeat="h in headers">{{h}}</th>
+            </tr> 
+            <tr> 
+                <td>Buckle</td> 
+                <td ng-repeat="r in rows">{{r}}</td>
+            </tr> 
+        </tbody> 
+    </table>
+</div>
+<br/>
+<button id="copy">Make Table</button>
+<br/>
+<textarea id="source" rows="20" cols="40">
+</textarea>
+
+</body>
+</html>
